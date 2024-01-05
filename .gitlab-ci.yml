@@ -1,0 +1,74 @@
+stages:
+  - build
+  - deploy
+
+build-dev:
+  stage: build
+  tags:
+    - node16
+  only:
+    - dev
+  script:
+    - npm install
+    - npm run build
+    - echo "JOB_ID=$CI_JOB_ID" > build.env
+  artifacts:
+    paths:
+      - dist.zip
+      - dist
+    reports:
+      dotenv: build.env
+
+
+build-prod:
+  stage: build
+  only:
+    - main
+  tags:
+    - node16
+  script:
+    - npm install
+    - npm run build
+    - echo "JOB_ID=$CI_JOB_ID" > build.env
+  artifacts:
+    paths:
+      - dist
+    reports:
+      dotenv: build.env
+
+
+
+deploy-dev:
+  stage: deploy
+  only:
+    - dev
+  tags:
+    - docker
+  image:
+    name: amazon/aws-cli
+    entrypoint: [ "" ]
+
+  script:
+    - export AWS_ACCESS_KEY_ID=$YACLOUD_ACCESS_KEY_ID
+    - export AWS_SECRET_ACCESS_KEY=$YACLOUD_SECRET_ACCESS_KEY
+    - export AWS_DEFAULT_REGION=$YACLOUD_REGION
+    - aws s3 cp --recursive dist/ s3://$YACLOUD_DEV_BUCKET_NAME --endpoint-url=$YACLOUD_ENDPOINT_URL
+  needs:
+    - build-dev
+
+# deploy-main:
+#   stage: deploy
+#   only:
+#     - main
+#   tags:
+#     - docker
+#   image:
+#     name: amazon/aws-cli
+#     entrypoint: [ "" ]
+#   script:
+#     - export AWS_ACCESS_KEY_ID=$YACLOUD_ACCESS_KEY_ID
+#     - export AWS_SECRET_ACCESS_KEY=$YACLOUD_SECRET_ACCESS_KEY
+#     - export AWS_DEFAULT_REGION=$YACLOUD_REGION
+#     - aws s3 cp --recursive dist/ s3://$YACLOUD_BUCKET_NAME --endpoint-url=$YACLOUD_ENDPOINT_URL
+#   needs:
+#     - build-prod

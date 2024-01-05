@@ -1,0 +1,127 @@
+@import 'colors.css';
+
+/* Deprecated */
+:root {
+	--hover-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+	/*--text-font: 'Open Sans', sans-serif;*/
+	/*--headings-font: 'Loos Wide', sans-serif;*/
+
+	/*--background-primary: #fff;*/
+
+	/*--headings-color: var(--gray-800-primary);*/
+	--text-primaty-color: var(--gray-800-primary);
+	/*--text-secondary-color: var(--gray-600-secondary-alt);*/
+	--links-color: var(--gray-800-primary);
+
+	--sidebar-background-color: var(--background-secondary);
+	--sidebar-legal-text-primary-color: var(--gray-700-secondary);
+	--sidebar-legal-text-secondary-color: var(--gray-600-secondary-alt);
+
+	--button-primary-default-color: var(--purple-brand);
+	--button-primary-hover-color: var(--purple-400);
+	--button-primary-disabled-color: #2f2d32;
+	--button-primary-font-active-color: var(--gray-100);
+	--button-primary-font-disabled-color: var(--gray-600-secondary-alt);
+
+	--button-outlined-default-color: var(--gray-100);
+	--button-outlined-font-active-color: var(--gray-800-primary);
+	--button-outlined-font-disabled-color: var(--gray-600-secondary-alt);
+	--button-outlined-default-border: 1px solid var(--gray-300);
+	--button-outlined-hover-border: 1px solid var(--gray-400);
+
+	--button-secondary-default-color: #f8f8f8;
+	--button-secondary-hover-color: #e7e7ef;
+	--button-secondary-disabled-color: #f8f8f8;
+	--button-secondary-font-active-color: #000;
+	--button-secondary-font-disabled-color: rgba(0, 0, 0, 0.5);
+
+	--input-border: 1px solid var(--gray-800-primary);
+	--input-text-color: var(--gray-800-primary);
+
+	--tab-button-default-color: var(--background-secondary);
+	--tab-button-opened-color: var(--purple-brand);
+
+	--stories-border-main-color: var(--purple-brand);
+	--stories-border-hover-color: #8d71f9;
+	--stories-border-viewed-color: var(--gray-200);
+
+	--nav-card-education-bg-color: var(--card-material-yellow-100);
+	--nav-card-education-icon-color: var(--card-material-yellow-200);
+	--nav-card-education-button-color: var(--card-material-yellow-300);
+
+	--nav-card-events-bg-color: var(--card-material-blue-100);
+	--nav-card-events-icon-color: var(--card-material-blue-200);
+	--nav-card-events-button-color: var(--card-material-blue-300);
+
+	--nav-card-media-bg-color: var(--card-material-purple-100);
+	--nav-card-media-icon-color: var(--card-material-purple-200);
+	--nav-card-media-button-color: var(--card-material-purple-300);
+
+	--announcement-bg-color: var(--background-secondary);
+	--announcement-topic-color: var(--gray-700-secondary);
+
+	--profile-widget-bg-color: var(--background-secondary);
+	/*--profile-widget-name-color: var(--gray-800-primary);*/
+	--profile-widget-location-color: var(--gray-700-secondary);
+
+	--rating-name-color: var(--gray-700-secondary);
+
+	--media-card-topic-color: var(--gray-800-primary);
+	--media-card-status-color: var(--gray-500-neutral);
+
+	--checkbox-unchecked-default-border-color: var(--gray-300);
+	--checkbox-unchecked-default-bg-color: transparent;
+	--checkbox-unchecked-hover-border-color: var(--purple-brand);
+	--checkbox-unchecked-hover-bg-color: #fff;
+	--checkbox-unchecked-disabled-border-color: var(--gray-300);
+	--checkbox-unchecked-disabled-bg-color: var(--gray-200);
+	--checkbox-checked-default-bg-color: var(--green-300);
+	--checkbox-checked-disabled-bg-color: var(--gray-300);
+
+	--search-border-color: var(--gray-800-primary);
+
+	--fw-bold: 700;
+	--fw-regular: 400;
+	--fw-semi-bold: 600;
+
+	/* Breadcrumbs AppBreadcrumbs.vue */
+	--breadcrumb-unactive-default-color: rgba(0, 0, 0, 0.5);
+	--breadcrumb-unactive-hover-color: #4c4c4c;
+	--breadcrumb-active-default-color: #000000;
+	--breadcrumb-active-hover-color: #4c4c4c;
+}
+
+:root {
+	/* Scaffolding variables */
+	--base-transition: all 0.1s ease-in-out;
+	--background-primary: #fff;
+	--default-border: 1px solid #d6d6e3;
+
+	/* Typography */
+	--text-font: 'Open Sans', sans-serif;
+	--headings-font: 'Loos Wide', sans-serif;
+	--headings-color: #000;
+	--text-primary-color: #000;
+	--text-hover-color: #4c4c4c;
+	--text-secondary-color: rgba(0, 0, 0, 0.5);
+
+	/* Modals */
+	--modal-window-shadow: 0 0 15px 0 rgba(153, 153, 153, 0.2);
+
+	/* Cards material */
+	--navigation-card--default-bg: #ffffff;
+	--navigation-card--hover-bg: #f8f8f8;
+
+	/* Badges */
+	--badge-bg-base-color: #ffffff;
+	--badge-bg-brand-color: #5c34f6;
+	--badge-bg-special-color: #de960c;
+	--badge-bg-grey-color: #f8f8f8;
+	--badge-font-base-color: rgba(0, 0, 0, 0.5);
+	--badge-font-brand-color: #ffffff;
+
+	/* Tags */
+	--tag-light-text-color: rgba(255, 255, 255, 0.5);
+	--tag-dark-text-color: rgba(0, 0, 0, 0.5);
+}

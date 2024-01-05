@@ -1,0 +1,45 @@
+<template>
+	<BaseSkeletonPath
+		:width="270"
+		:height="40"
+	/>
+	<BaseSkeletonPath
+		:width="170"
+		:height="16"
+		class="mt-2"
+	/>
+	<BaseSkeletonPath
+		:width="80"
+		:height="28"
+		class="mt-7"
+	/>
+	<BaseSkeletonPath :width="'100%'" :height="16" class="mt-2" />
+	<BaseSkeletonPath :width="'100%'" :height="16" class="mt-2" />
+	<BaseSkeletonPath :width="'50%'" :height="16" class="mt-2" />
+	<BaseSkeletonPath
+		:width="150"
+		:height="28"
+		class="mt-7"
+	/>
+	<BaseSkeletonPath
+		:width="170"
+		:height="16"
+		class="mt-2"
+	/>
+	<BaseSkeletonPath
+		:width="160"
+		:height="28"
+		class="mt-7"
+	/>
+	<BaseSkeletonPath
+		:width="170"
+		:height="16"
+		class="mt-2"
+	/>
+	<BaseSkeletonPath
+		:width="160"
+		:height="44"
+		class="mt-7"
+		:border-radius="5"
+	/>
+</template>
